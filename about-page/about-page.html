@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
+    <link rel="stylesheet" href="style-about-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+    <header>
+        <h1>About Our Team</h1>
+        <button id="dark-mode-toggle" class="dark-mode-btn">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
     <div class="container">
         <section class="about-me">
             <img src="/github-practice-LebronJamesProgrammingTeam/resources/lebroncodinggroup.jpeg" alt="Profile Picture">
@@ -13,5 +21,37 @@
             <p>We are the Lebron James Coding Group, a team of passionate web developers dedicated to creating innovative and user-friendly websites. Together, we explore new technologies, collaborate on exciting projects, and strive to push the boundaries of web development. In our free time, we enjoy learning, sharing knowledge, and inspiring others in the tech community.</p>
         </section>
     </div>
+
+    <script>
+    // Dark mode functionality
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+    const icon = darkModeToggle.querySelector('i');
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      body.classList.add(savedTheme);
+      if (savedTheme === 'dark-mode') {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      }
+    }
+
+    darkModeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      
+      // Toggle icon
+      if (body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        localStorage.setItem('theme', 'dark-mode');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+        localStorage.setItem('theme', 'light-mode');
+      }
+    });
+    </script>
 </body>
 </html>
