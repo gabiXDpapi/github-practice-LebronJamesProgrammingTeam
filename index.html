@@ -13,13 +13,16 @@
 <body>
   <header>
     <h1 text-align: center>Welcome to Lebron James Programmers</h1>
+    <button id="dark-mode-toggle" class="dark-mode-btn">
+      <i class="fas fa-moon"></i>
+    </button>
   </header>
 
   <main>
     <div class="topnav">
   <a class="active" href="#home">Home</a>
   <a href="contact-form-page/contact-form.html">Contact</a>
-  <a href="#about">About</a>
+  <a href="about-page/about-page.html">About</a>
 </div>
   </main>
 
@@ -37,5 +40,37 @@
     </a>
   </div>
 </footer>
+
+<script>
+// Dark mode functionality
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
+const icon = darkModeToggle.querySelector('i');
+
+// Check for saved theme preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  body.classList.add(savedTheme);
+  if (savedTheme === 'dark-mode') {
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+  }
+}
+
+darkModeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  
+  // Toggle icon
+  if (body.classList.contains('dark-mode')) {
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+    localStorage.setItem('theme', 'dark-mode');
+  } else {
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon');
+    localStorage.setItem('theme', 'light-mode');
+  }
+});
+</script>
 </body>
 </html>
