@@ -1,4 +1,8 @@
 /* General styles */
+header {
+    text-align: center;
+}
+
 body {
     background: #f4f6fb;
     margin: 0;
@@ -15,6 +19,7 @@ body {
     top: 0;
     left: 0;
     margin-bottom: 40px;
+    font-family: 'Quicksand', 'Segoe UI', 'Arial', sans-serif;
 }
 
 /* Style the links inside the navigation bar */
