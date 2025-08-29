@@ -1,53 +1,72 @@
-/* General styles for the about page */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Quicksand', 'Segoe UI', 'Arial', sans-serif;
+    font-size: 1.05rem;
+    color: #444;
+    background: #f7f7f7;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-/* Header styles */
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
     text-align: center;
 }
 
-/* Main content styles */
-main {
-    padding: 20px;
-    max-width: 800px;
+.container {
+    max-width: 900px;
+    margin: 48px auto;
+    padding: 32px 20px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+.about-me img {
+    display: block;
+    margin: 0 auto 18px auto;
+    width: 700px;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+}
+
+.about-me h1 {
+    font-size: 2.1rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    letter-spacing: 0.03em;
+}
+
+.about-me p {
+    line-height: 1.8;
+    letter-spacing: 0.01em;
     margin: 0 auto;
-    background: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-/* Section titles */
-h1, h2 {
-    color: #ff8da1;
-}
-
-/* Specific style for "About Us" */
-h1.about-us, h2.about-us {
-    color: #ff8da1;
-}
-
-/* Paragraph styles */
-p {
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-/* Footer styles */
-footer {
     text-align: center;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    color: #555;
+    font-weight: 400;
+    max-width: 90%;
+}
+
+.topnav {
+  background-color: #000000;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #FF8DA1;
+  color: white;
 }
