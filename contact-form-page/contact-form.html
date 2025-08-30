@@ -5,10 +5,14 @@
     <title>Contact Form</title>
     <link rel="stylesheet" href="style-contact-form.css">  
     <link rel="stylesheet" href="../footer-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
   <header>
     <h1 style="text-align: center;">Welcome to Lebron James Programmers</h1>
+    <button id="dark-mode-toggle" class="dark-mode-btn">
+        <i class="fas fa-moon"></i>
+    </button>
   </header>
 
   <div class="topnav">
@@ -55,5 +59,37 @@
       </a>
     </div>
   </footer>
+
+  <script>
+  // Dark mode functionality
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
+  const body = document.body;
+  const icon = darkModeToggle.querySelector('i');
+
+  // Check for saved theme preference
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    body.classList.add(savedTheme);
+    if (savedTheme === 'dark-mode') {
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+    }
+  }
+
+  darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    
+    // Toggle icon
+    if (body.classList.contains('dark-mode')) {
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+      localStorage.setItem('theme', 'dark-mode');
+    } else {
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon');
+      localStorage.setItem('theme', 'light-mode');
+    }
+  });
+  </script>
 </body>
 </html>

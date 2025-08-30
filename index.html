@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +14,9 @@
 <body>
   <header>
     <h1 text-align: center>Welcome to Lebron James Programmers</h1>
+    <button id="dark-mode-toggle" class="dark-mode-btn">
+      <i class="fas fa-moon"></i>
+    </button>
   </header>
 
   <main>
@@ -37,5 +41,38 @@
     </a>
   </div>
 </footer>
+
+<script>
+  //xyryllgwaps
+// Dark mode functionality
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
+const icon = darkModeToggle.querySelector('i');
+
+// Check for saved theme preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  body.classList.add(savedTheme);
+  if (savedTheme === 'dark-mode') {
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+  }
+}
+
+darkModeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  
+  // Toggle icon
+  if (body.classList.contains('dark-mode')) {
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+    localStorage.setItem('theme', 'dark-mode');
+  } else {
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon');
+    localStorage.setItem('theme', 'light-mode');
+  }
+});
+</script>
 </body>
 </html>
