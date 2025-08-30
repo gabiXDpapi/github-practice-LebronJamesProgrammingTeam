@@ -1,10 +1,14 @@
 /* General styles */
+header {
+    text-align: center;
+}
+
 body {
-    font-family: Arial, sans-serif;
     background: #f4f6fb;
     margin: 0;
     padding: 0;
     min-height: 100vh;
+<<<<<<< HEAD
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -52,41 +56,88 @@ header h1 {
 .dark-mode-btn:hover {
     background: #e67390;
     transform: scale(1.1);
+=======
+>>>>>>> origin/develop
 }
 
-/* Outer box wrapper */
-.page-box {
-    background: #fff;
-    border: 2px solid #d1d5db;
-    border-radius: 16px;
-    box-shadow: 0 6px 32px rgba(0,0,0,0.10);
-    padding: 40px 32px;
-    max-width: 480px;
+/* Navigation bar stays at the top */
+.topnav {
+    background-color: #000000;
+    overflow: hidden;
     width: 100%;
+<<<<<<< HEAD
     margin: 0;
     transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+=======
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 40px;
+    font-family: 'Quicksand', 'Segoe UI', 'Arial', sans-serif;
+>>>>>>> origin/develop
 }
 
-/* Center the form */
-.contact-form-container {
-    max-width: 400px;
-    margin: 0 auto;
-    background: transparent;
-    padding: 0;
-    border-radius: 0;
-    box-shadow: none;
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
-/* Form title */
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #FF8DA1;
+    color: white;
+}
+
+/* Centered container */
+.form-center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: #f5f6fa; /* light background for contrast */
+    padding: 20px;
+}
+
+/* Card wrapper */
+.page-box {
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+    padding: 40px 36px;
+    width: 33.3%;          /* 1/3 of screen width */
+    min-width: 340px;      /* ensure readability on small screens */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.page-box:hover {
+    transform: translateY(-3px); /* subtle lift effect */
+}
+
+/* Title */
 .contact-form-container h2 {
-    margin-top: 0;
-    margin-bottom: 24px;
-    font-size: 1.8rem;
-    color: #222;
+    margin: 0 0 24px;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #2c2c2c;
     text-align: center;
     transition: color 0.3s ease;
 }
 
+<<<<<<< HEAD
 /* Form fields */
 .contact-form label {
     display: block;
@@ -94,19 +145,38 @@ header h1 {
     font-weight: 600;
     color: #333;
     transition: color 0.3s ease;
+=======
+/* Form structure */
+.contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+>>>>>>> origin/develop
 }
 
+.contact-form label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 4px;
+}
+
+/* Inputs & Textarea */
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
-    padding: 10px 12px;
-    margin-bottom: 18px;
+    width: 90%;
+    padding: 13px 15px;
     border: 1px solid #d1d5db;
-    border-radius: 6px;
+    border-radius: 10px;
     font-size: 1rem;
     background: #f9fafb;
+<<<<<<< HEAD
     transition: border-color 0.2s, background-color 0.3s ease;
     box-sizing: border-box;
+=======
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+>>>>>>> origin/develop
 }
 
 .contact-form input:focus,
@@ -114,32 +184,41 @@ header h1 {
     border-color: #4f8cff;
     outline: none;
     background: #fff;
+    box-shadow: 0 0 0 4px rgba(79,140,255,0.12);
 }
 
-/* Submit button */
+/* Button */
 .contact-form button[type="submit"] {
-    width: 100%;
-    padding: 12px;
+    padding: 14px;
     background: #ff8da1;
     color: #fff;
     border: none;
-    border-radius: 6px;
+    border-radius: 10px;
     font-size: 1.1rem;
     font-weight: 700;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 12px rgba(240,154,243,0.25);
 }
 
 .contact-form button[type="submit"]:hover {
-    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(240,154,243,0.35);
 }
 
-/* Responsive */
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .page-box {
+        width: 60%;
+    }
+}
+
 @media (max-width: 600px) {
     .page-box {
-        padding: 18px 6px;
-        max-width: 98vw;
+        width: 95%;
+        padding: 28px 20px;
     }
+<<<<<<< HEAD
     .contact-form-container {
         max-width: 100%;
     }
@@ -186,3 +265,6 @@ body.dark-mode .contact-form textarea:focus {
     background: #444;
     border-color: #4f8cff;
 }
+=======
+}
+>>>>>>> origin/develop

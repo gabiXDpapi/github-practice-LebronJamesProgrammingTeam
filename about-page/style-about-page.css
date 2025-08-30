@@ -1,8 +1,16 @@
-/* General styles for the about page */
+header h1 {
+    font-size: 2rem; /* or match the index page's size */
+    font-family: 'Times New Roman', Times, serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Quicksand', 'Segoe UI', 'Arial', sans-serif;
+    font-size: 1.05rem;
+    color: #000000;
+    background: #f7f7f7;
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
     background-color: #f9f9f9;
     color: #333;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -13,11 +21,14 @@ header {
     background-color: #4CAF50;
     color: white;
     padding: 20px;
+=======
+>>>>>>> origin/develop
     text-align: center;
     position: relative;
     transition: background-color 0.3s ease;
 }
 
+<<<<<<< HEAD
 /* Dark mode toggle button */
 .dark-mode-btn {
     position: absolute;
@@ -117,3 +128,41 @@ body.dark-mode h2 {
 body.dark-mode footer {
     background-color: #2d2d2d;
 }
+=======
+.container {
+    max-width: 900px;
+    margin: 48px auto;
+    padding: 32px 20px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+.about-me img {
+    display: block;
+    margin: 0 auto 18px auto;
+    width: 700px;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+}
+
+.about-me h1 {
+    font-size: 2.1rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    letter-spacing: 0.03em;
+}
+
+.about-me p {
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+    margin: 0 auto;
+    text-align: center;
+    color: #000000;
+    font-weight: 400;
+    max-width: 90%;
+}
+
+>>>>>>> origin/develop
