@@ -4,6 +4,7 @@
   text-align: center;
   padding: 24px 0 16px 0;
   font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease;
 }
 
 .site-footer .social-links {
@@ -20,4 +21,9 @@
 
 .site-footer .social-links a:hover {
   color: #1da1f2; /* Twitter blue as hover color */
+}
+
+/* Dark mode footer styles x */
+body.dark-mode .site-footer {
+  background: #111;
 }

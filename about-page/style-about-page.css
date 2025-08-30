@@ -3,6 +3,36 @@ header h1 {
     font-family: 'Times New Roman', Times, serif;
 }
 
+header {
+    position: relative;
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark mode toggle button */
+.dark-mode-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #FF8DA1;
+    border: none;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1000;
+}
+
+.dark-mode-btn:hover {
+    background: #e67390;
+    transform: scale(1.1);
+}
+
 body {
     font-family: 'Quicksand', 'Segoe UI', 'Arial', sans-serif;
     font-size: 1.05rem;
@@ -11,6 +41,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -20,6 +51,7 @@ body {
     background: #fff;
     border-radius: 14px;
     box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-me img {
@@ -37,6 +69,8 @@ body {
     font-weight: 600;
     margin-bottom: 16px;
     letter-spacing: 0.03em;
+    color: #ff8da1;
+    transition: color 0.3s ease;
 }
 
 .about-me p {
@@ -47,5 +81,34 @@ body {
     color: #000000;
     font-weight: 400;
     max-width: 90%;
+    transition: color 0.3s ease;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #2d2d2d;
+    border-bottom-color: #444;
+}
+
+body.dark-mode header h1 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .container {
+    background: #2d2d2d;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .about-me h1 {
+    color: #FF8DA1;
+}
+
+body.dark-mode .about-me p {
+    color: #e0e0e0;
 }
 
