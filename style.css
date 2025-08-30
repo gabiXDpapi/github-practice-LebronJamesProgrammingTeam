@@ -8,14 +8,18 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Header styles */
+.topnav {
+  background-color: #000000;
+  overflow: hidden;
+}
+
 header {
-  position: relative;
-  background-color: #f8f9fa;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+    position: relative;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 header h1 {
@@ -43,15 +47,6 @@ header h1 {
 .dark-mode-btn:hover {
   background: #e67390;
   transform: scale(1.1);
-}
-
-.topnav {
-  background-color: #000000;
-  overflow: hidden;
-}
-
-header {
-    text-align: center;
 }
 
 /* Style the links inside the navigation bar */
