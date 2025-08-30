@@ -3,32 +3,15 @@ header h1 {
     font-family: 'Times New Roman', Times, serif;
 }
 
-body {
-    font-family: 'Quicksand', 'Segoe UI', 'Arial', sans-serif;
-    font-size: 1.05rem;
-    color: #000000;
-    background: #f7f7f7;
-    margin: 0;
-    padding: 0;
-<<<<<<< HEAD
-    background-color: #f9f9f9;
-    color: #333;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Header styles */
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
-=======
->>>>>>> origin/develop
-    text-align: center;
     position: relative;
-    transition: background-color 0.3s ease;
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-<<<<<<< HEAD
 /* Dark mode toggle button */
 .dark-mode-btn {
     position: absolute;
@@ -50,85 +33,17 @@ header {
     transform: scale(1.1);
 }
 
-/* Container and section styles */
-.container {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.about-me {
-    background: white;
-    padding: 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+body {
+    font-family: 'Quicksand', 'Segoe UI', 'Arial', sans-serif;
+    font-size: 1.05rem;
+    color: #000000;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.about-me img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    border: 4px solid #ff8da1;
-}
-
-/* Section titles */
-h1, h2 {
-    color: #ff8da1;
-    transition: color 0.3s ease;
-}
-
-/* Specific style for "About Us" */
-h1.about-us, h2.about-us {
-    color: #ff8da1;
-}
-
-/* Paragraph styles */
-p {
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-/* Footer styles */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    transition: background-color 0.3s ease;
-}
-
-/* Dark mode styles */
-body.dark-mode {
-    background-color: #1a1a1a;
-    color: #e0e0e0;
-}
-
-body.dark-mode header {
-    background-color: #2d2d2d;
-}
-
-body.dark-mode .about-me {
-    background: #2d2d2d;
-    color: #e0e0e0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-body.dark-mode h1, 
-body.dark-mode h2 {
-    color: #FF8DA1;
-}
-
-body.dark-mode footer {
-    background-color: #2d2d2d;
-}
-=======
 .container {
     max-width: 900px;
     margin: 48px auto;
@@ -136,6 +51,7 @@ body.dark-mode footer {
     background: #fff;
     border-radius: 14px;
     box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-me img {
@@ -153,6 +69,8 @@ body.dark-mode footer {
     font-weight: 600;
     margin-bottom: 16px;
     letter-spacing: 0.03em;
+    color: #ff8da1;
+    transition: color 0.3s ease;
 }
 
 .about-me p {
@@ -163,6 +81,34 @@ body.dark-mode footer {
     color: #000000;
     font-weight: 400;
     max-width: 90%;
+    transition: color 0.3s ease;
 }
 
->>>>>>> origin/develop
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #2d2d2d;
+    border-bottom-color: #444;
+}
+
+body.dark-mode header h1 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .container {
+    background: #2d2d2d;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .about-me h1 {
+    color: #FF8DA1;
+}
+
+body.dark-mode .about-me p {
+    color: #e0e0e0;
+}
+
